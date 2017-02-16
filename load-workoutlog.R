@@ -53,7 +53,8 @@ style <- list(scale_x_date(breaks = date_breaks("2 week"),
                            # minor_breaks = date_breaks("1 day"),
                            labels=date_format("%m-%d")),
               geom_point(),
-              facet_wrap(~Exercise)
+              facet_wrap(~Exercise, scales = "free_y"),
+              theme(axis.text.x = element_text(angle = 90))
               )
 
 ## Plot
