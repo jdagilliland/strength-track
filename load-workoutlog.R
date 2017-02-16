@@ -43,7 +43,9 @@ weight[,DateTime:=ymd_hm(paste(Date, Time))]
 ## Correct ill-named column.
 setnames(strength,"# of Reps", "Reps")
 power.lifts <- c("Standing Overhead Press", "Bench Press", "Deadlift",
-                 "Squat", "Bent-over Row")
+                 "Squat", "Power Clean")
+# power.lifts <- c("Standing Overhead Press", "Bench Press", "Deadlift",
+#                  "Squat", "Bent-over Row")
 strength[, est.1rm := calc.1rm.lander(Reps, Weight)]
 
 ## Styles
